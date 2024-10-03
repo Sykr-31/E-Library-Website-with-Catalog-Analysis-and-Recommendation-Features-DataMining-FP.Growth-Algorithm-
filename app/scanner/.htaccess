@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /perpustakaan/app/scanner/
+    ErrorDocument 404 http://localhost/Perpustakaan/app/scanner/home.php?module=pages/views/v_404
+
+    RewriteRule ^dashboard$ home.php [L]
+    RewriteRule ^beranda$ home.php?module=pages/beranda [L]
+    RewriteRule ^lihat-pesan$ pages/views/v_isi_pesan.php [L]
+    RewriteRule ^riwayat-peminjaman$ home.php?module=pages/views/v_riwayat_peminjaman [QSA,L]
+
+    RewriteRule ^login$ login.php [L]
+</IfModule>
